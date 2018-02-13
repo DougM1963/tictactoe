@@ -132,3 +132,19 @@ border-right: none;
 border-bottom: none;
 border-left-color: #000000;
 }
+input[type=text] {
+  border: none;
+    background-color: #AB5954;
+    font-color: #000000;
+    font-size:50px;
+    text-align: center;
+  width: 100px;
+    box-sizing: border-box;
+    }
+    input[type=submit] {
+    padding:5px 15px; 
+    background:#AB5954; 
+    color:#AB5954;
+    border:0 none;
+    
+}
