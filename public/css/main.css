@@ -2,10 +2,10 @@ body {
   background-color: #74828F;
   color: black;
   background-image: url(/../imgs/blue.jpg);
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Book Antiqua", Georgia, Garamond, 'Times New Roman', Times, serif;
 }
-.title {font-size: 40px;
+.title {font-size: 30px;
   font-family: Baskerville, Georgia, Garamond, 'Times New Roman', Times, serif;
   font-weight: bold; color: black;
 }
