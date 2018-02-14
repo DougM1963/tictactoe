@@ -5,45 +5,47 @@
 <body>
 <br>
 <div class="title"> Doug`s Tic Tac Toe Game </div><br>
-Player1 is X`s - Player2 is O`s<br>
-<br> 
-<br>
-<%= $result %>
-<table style="width:100%">
-    <table align="center" width= "200" cellpadding= "30" cellspacing= "0">
-<tr>
-<td class="grid1">
-    <form method="post" action="board"><input type="text" name="grid1" align="center" size="1" value= <%= grid1 %>>
+Player1 is X`s - Player2 is O`s
+<br><br> 
+<%= winner_result %>
+<table align="center" width= "200" height= "100" cellpadding= "15" cellspacing= "0">
+<tr style="height:100px">
+<td class="grid1" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid1" align="center" size="1" value= <%= grid1 %>>
+</td>
+<td class="grid2" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid2" align="center" size="1" value= <%= grid2 %>>
+</td>
+<td class="grid3" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid3" align="center" size="1" value= <%= grid3 %>>
+</td>
+</tr>
+<tr style="height:100px">
+<td class="grid4" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid4" align="center" size="1" value= <%= grid4 %>>
     </td>
-<td class="grid2">
-    <form method="post" action="board"><input type="text" name="grid2" align="center" size="1" value= <%=grid2 %>>
+<td class="grid5" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid5" align="center" size="1" value= <%= grid5 %>>
     </td>
-<td class="grid3">
-    <form method="post" action="board"><input type="text" name="grid3" align="center" size="1" value= <%= grid3 %>>
+<td class="grid6" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid6" align="center" size="1" value= <%= grid6 %>>
     </td>
 </tr>
-<tr>
-<td class="grid4">
-    <form method="post" action="board"><input type="text" name="grid4" align="center" size="1" value= <%= grid4 %>>
+<tr style="height:100px">
+<td class="grid7" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid7" align="center" size="1" value= <%= grid7 %>>
     </td>
-<td class="grid5">
-    <form method="post" action="board"><input type="text" name="grid5" align="center" size="1" value= <%=grid5 %>>
+<td class="grid8" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid8" align="center" size="1" value= <%= grid8 %>>
     </td>
-<td class="grid6">
-    <form method="post" action="board"><input type="text" name="grid6" align="center" size="1" value= <%= grid6 %>>
-    </td>
-</tr>
-<tr>
-<td class="grid7">
-    <form method="post" action="board"><input type="text" name="grid7" align="center" size="1" value= <%= grid7 %>>
-    </td>
-<td class="grid8">
-    <form method="post" action="board"><input type="text" name="grid8" align="center" size="1" value= <%=grid8 %>>
-    </td>
-<td class="grid9">
-    <form method="post" action="board"><input type="text" name="grid9" align="center" size="1" value= <%= grid9 %>>
+<td class="grid9" align="center" valign="middle">
+<form method="post" action="board"><input type="text" name="grid9" align="center" size="1" value= <%= grid9 %>>
     </td>
 </tr>
-<input type="submit">
-</center>
+<input type="submit" class="buttonSubmit">
+</form>
+</table><br>
+<form method="get" action="/">
+    <button type="submit" class="refresh">Start New Game</button>
+</form>
 </body>

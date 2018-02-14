@@ -29,7 +29,9 @@ get '/play' do
 	grid7 = params[:grid7]
 	grid8 = params[:grid8]
 	grid9 = params[:grid9]
-	erb :play, :locals => {:grid1 => grid1, :grid2 => grid2, :grid3 => grid3, :grid4 => grid4, :grid5 => grid5, :grid6 => grid6, :grid7 => grid7, :grid8 => grid8, :grid9 => grid9}
+	winner_result = winners(grid1.upcase,grid2.upcase,grid3.upcase.upcase,grid4.upcase,grid5.upcase,grid6.upcase,grid7.upcase,grid8.upcase,grid9.upcase)
+	puts winner_result 
+	erb :play, :locals => {:grid1 => grid1, :grid2 => grid2, :grid3 => grid3, :grid4 => grid4, :grid5 => grid5, :grid6 => grid6, :grid7 => grid7, :grid8 => grid8, :grid9 => grid9, :winner_result => winner_result}
 end
 
 

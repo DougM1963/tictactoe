@@ -37,7 +37,6 @@ def winners(a,b,c,d,e,f,g,h,i)
 		plays = win_grids[i] 
 			if plays == x_wins
 				$result = "X's have won"
-				break
 			elsif plays == o_wins
 				$result = "O's have won"  
 			end

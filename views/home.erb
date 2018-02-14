@@ -5,26 +5,27 @@
 <body>
 <br>
 <div class="title"> Doug`s Tic Tac Toe Game </div><br>
-Player1 is X`s - Player2 is O`s<br>
-<form method="post" action="board">
-    <table align="center" width= "200" cellpadding= "30" cellspacing= "0">
-<tr>
-<td class="grid1"><input type="text" name="grid1" id="grid1" align="center" size="1"></td>
-<td class="grid2"><input type="text" name="grid2" id="grid2" align="center" size="1"></td>
-<td class="grid3"><input type="text" name="grid3" id="grid3" align="center" size="1"></td>
+Player1 is X`s - Player2 is O`s
+<br><br>
+<table align="center" width= "200" height= "100" cellpadding= "15" cellspacing= "0">
+<tr style="height:100px">
+<td class="grid1" align="center" valign="middle"><form method="post" action="board"><input type="text" name="grid1" id="grid1" align="center" size="1"></td>
+<td class="grid2" align="center" valign="middle"><input type="text" name="grid2" id="grid2" align="center" size="1"></td>
+<td class="grid3" align="center" valign="middle"><input type="text" name="grid3" id="grid3" align="center" size="1"></td>
 </tr>
-<tr>
-<td class="grid4"><input type="text" name="grid4" id="grid4" align="center" size="1"></td>
-<td class="grid5"><input type="text" name="grid5" id="grid5" align="center" size="1"></td>
-<td class="grid6"><input type="text" name="grid6" id="grid6" align="center" size="1"></td>
+<tr style="height:100px">
+<td class="grid4" align="center" valign="middle"><input type="text" name="grid4" id="grid4" align="center" size="1"></td>
+<td class="grid5" align="center" valign="middle"><input type="text" name="grid5" id="grid5" align="center" size="1"></td>
+<td class="grid6" align="center" valign="middle"><input type="text" name="grid6" id="grid6" align="center" size="1"></td>
 </tr>
-<tr>
-<td class="grid7"><input type="text" name="grid7" id="grid7" align="center" size="1"></td>
-<td class="grid8"><input type="text" name="grid8" id="grid8" align="center" size="1"></td>
-<td class="grid9"><input type="text" name="grid9" id="grid9" align="center" size="1"></td>
-</tr><br><br>
-<input type="submit">
-</table>
-</form>	
-</center>
+<tr style="height:100px">
+<td class="grid7" align="center" valign="middle"><input type="text" name="grid7" id="grid7" align="center" size="1"></td>
+<td class="grid8" align="center" valign="middle"><input type="text" name="grid8" id="grid8" align="center" size="1"></td>
+<td class="grid9" align="center" valign="middle"><input type="text" name="grid9" id="grid9" align="center" size="1"></td>
+</tr>
+<input type="submit" class="buttonSubmit">
+</table><br>
+<form method="get" action="/">
+    <button type="submit" class="refresh">Start New Game</button>
+</form>
 </body>
