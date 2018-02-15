@@ -25,6 +25,7 @@ def play_random(a,b,c,d,e,f,g,h,i)
 	a = "grid"
 	out = a<<random_pick 
 	return out
+	puts out
 
 end
 
@@ -37,8 +38,13 @@ def winners(a,b,c,d,e,f,g,h,i)
 		plays = win_grids[i] 
 			if plays == x_wins
 				$result = "X's have won"
+				break
 			elsif plays == o_wins
-				$result = "O's have won"  
+				$result = "O's have won" 
+				break
+			else
+				$result = "No Winners Yet"
+
 			end
 	end
 	return $result 
