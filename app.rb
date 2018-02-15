@@ -17,7 +17,7 @@ post '/board' do
 	grid8 = params[:grid8]
 	grid9 = params[:grid9]
 	puts grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
-	redirect '/play?grid1=' + grid1 + '&grid2=' + grid2 + '&grid3=' + grid3 + '&grid4=' + grid4 + '&grid5=' + grid5 + '&grid6=' + grid6 + '&grid7=' + grid7 + '&grid8=' + grid8 + '&grid9=' + grid9
+	redirect '/play?grid1=' + grid1.upcase + '&grid2=' + grid2.upcase + '&grid3=' + grid3.upcase + '&grid4=' + grid4.upcase + '&grid5=' + grid5.upcase + '&grid6=' + grid6.upcase + '&grid7=' + grid7.upcase + '&grid8=' + grid8.upcase + '&grid9=' + grid9.upcase
 end
 
 get '/play' do
@@ -34,7 +34,6 @@ get '/play' do
 	grid9 = params[:grid9]
 	print grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8
 	computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
-	winner_result = winners(grid1.upcase,grid2.upcase,grid3.upcase,grid4.upcase,grid5.upcase,grid6.upcase,grid7.upcase,grid8.upcase,grid9.upcase)
 	if computer == "grid1"
 			grid1 = "O"
 		elsif computer == "grid2"
@@ -54,6 +53,7 @@ get '/play' do
 		elsif computer == "grid9"
 			grid9 = "O"
 		end
+	winner_result = winners(grid1.upcase,grid2.upcase,grid3.upcase,grid4.upcase,grid5.upcase,grid6.upcase,grid7.upcase,grid8.upcase,grid9.upcase)	
 	erb :play, :locals => {:grid1 => grid1, :grid2 => grid2, :grid3 => grid3, :grid4 => grid4, :grid5 => grid5, :grid6 => grid6, :grid7 => grid7, :grid8 => grid8, :grid9 => grid9, :computer => computer, :winner_result => winner_result}
 end
 
