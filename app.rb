@@ -32,6 +32,78 @@ get '/play' do
 	grid7 = params[:grid7]
 	grid8 = params[:grid8]
 	grid9 = params[:grid9]
+	if grid1 == "X"
+			grid1 = "X"
+		elsif grid1 == "O"
+			grid1 = "O"
+		elsif grid1 == ""
+			grid1 = ""
+		else grid1 = "X"
+		end
+		if grid2 == "X"
+			grid2 = "X"
+		elsif grid2 == "O"
+			grid2 = "O"
+		elsif grid2 == ""
+			grid2 = ""
+		else grid2 = "X"
+		end
+		if grid3 == "X"
+			grid3 = "X"
+		elsif grid3 == "O"
+			grid3 = "O"
+		elsif grid3 == ""
+			grid3 = ""
+		else grid3 = "X"
+		end
+		if grid4 == "X"
+			grid4 = "X"
+		elsif grid4 == "O"
+			grid4 = "O"
+		elsif grid4 == ""
+			grid4 = ""
+		else grid4 = "X"
+		end
+		if grid5 == "X"
+			grid5 = "X"
+		elsif grid5 == "O"
+			grid5 = "O"
+		elsif grid5 == ""
+			grid5 = ""
+		else grid5 = "X"
+		end
+		if grid6 == "X"
+			grid6 = "X"
+		elsif grid6 == "O"
+			grid6 = "O"
+		elsif grid6 == ""
+			grid6 = ""
+		else grid6 = "X"
+		end
+		if grid7 == "X"
+			grid7 = "X"
+		elsif grid7 == "O"
+			grid7 = "O"
+		elsif grid7 == ""
+			grid7 = ""
+		else grid7 = "X"
+		end
+		if grid8 == "X"
+			grid8 = "X"
+		elsif grid8 == "O"
+			grid8 = "O"
+		elsif grid8 == ""
+			grid8 = ""
+		else grid8 = "X"
+		end
+		if grid9 == "X"
+			grid9 = "X"
+		elsif grid9 == "O"
+			grid9 = "O"
+		elsif grid9 == ""
+			grid9 = ""
+		else grid9 = "X"
+		end
 	print grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8
 	computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
 	if computer == "grid1"

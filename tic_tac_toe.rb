@@ -6,7 +6,14 @@
     elsif player2 = O
       return O
     end
-  
+    if grid1 == "X"
+			grid1 = "X"
+		elsif grid1 == "O"
+			grid1 = "O"
+		elsif grid1 == ""
+			grid1 = ""
+		else grid1 = ""
+		end
     end	
  end
 
