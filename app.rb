@@ -86,7 +86,7 @@ get '/play' do
 			grid9 = ""
 		else grid9 = "X"
 		end
-	print grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8
+	print grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
 	computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
 	if computer == "grid1"
 			grid1 = "O"

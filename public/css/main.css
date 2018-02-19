@@ -61,6 +61,9 @@ footer {
     font-size: 16px;
 }
 .grid1 {
+   width: 100px;
+  height: 100px;
+font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top: none;
@@ -69,6 +72,9 @@ border-bottom-color: #000000;
 border-left: none;
 }
 .grid2 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top: none;
@@ -77,6 +83,9 @@ border-bottom-color: #000000;
 border-left: none;
 }
 .grid3 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top: none;
@@ -85,6 +94,7 @@ border-bottom-color: #000000;
 border-left-color: #000000;
 }
 .grid4 {
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top: none;
@@ -93,6 +103,9 @@ border-bottom: none;
 border-left: none;
 }
 .grid5 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top: none;
@@ -101,6 +114,9 @@ border-bottom: none;
 border-left: none;
 }
 .grid6 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top: none;
@@ -109,6 +125,9 @@ border-bottom: none;
 border-left-color: #000000;
 }
 .grid7 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top-color: #000000;
@@ -117,6 +136,9 @@ border-bottom: none;
 border-left: none;
 }
 .grid8 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top-color: #000000;
@@ -125,6 +147,9 @@ border-bottom: none;
 border-left: none;
 }
 .grid9 {
+   width: 100px;
+  height: 100px;
+  font-size: 50px;
   border: 5px;
     border-style: solid;
     border-top-color: #000000;
@@ -133,7 +158,7 @@ border-bottom: none;
 border-left-color: #000000;
 }
 input[type=submit] {
-  border: none;
+  border:none;
     background-color: #74828F;
     color: #000000;
     font-size:50px;
@@ -146,7 +171,7 @@ input[type=submit] {
 
     .buttonSubmit
 {
-  
+  display: none;
 }
 .refresh {
   border: none;
@@ -157,4 +182,10 @@ input[type=submit] {
   width: 150px;
   height: 30px;
     }
-    
+    table {
+  width: 100px;
+  height: 100px;
+  table-layout: fixed;
+  border-collapse: fixed;
+  width: 60%;
+}
