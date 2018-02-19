@@ -4,13 +4,15 @@
 </head>
 <body>
 <br>
-<div class="title"> Doug`s Tic Tac Toe Game </div><br>
+<div class="title">Doug`s Tic Tac Toe Game </div><br>
 Player1 is X`s - Player2 (Computer) is O`s
-<br><br> 
+<br><br><br> 
 <%= winner_result %>
-<table align="center" width= "200" height= "100" cellpadding= "15" cellspacing= "0">
-<tr style="height:100px">
-<td class="grid1" align="center" valign="middle">
+<br>
+<br>
+<table align="center" width= "100" height= "100" cellpadding= "0" cellspacing= "0">
+<tr>
+<td class="grid1" align="center">
 <form method="post" action="board">
 	<% if grid1.upcase == 'X' || grid1.upcase == 'O' %>
 	<input type="hidden" name="grid1" align="center" size="1" value= <%= grid1 %>>
@@ -21,7 +23,7 @@ Player1 is X`s - Player2 (Computer) is O`s
 	<input type="submit" name="grid1" align="center" size="1" value= "1">
     <% end %>
 </td>
-<td class="grid2" align="center" valign="middle">
+<td class="grid2" align="center">
 <form method="post" action="board">
 	<% if grid2.upcase == 'X' || grid2.upcase == 'O' %>
 	<input type="hidden" name="grid2" align="center" size="1" value= <%= grid2 %>>
@@ -32,7 +34,7 @@ Player1 is X`s - Player2 (Computer) is O`s
 	<input type="submit" name="grid2" align="center" size="1" value= "2">
     <% end %>
 </td>
-<td class="grid3" align="center" valign="middle">
+<td class="grid3" align="center">
 <form method="post" action="board">
 	<% if grid3.upcase == 'X' || grid3.upcase == 'O' %>
 	<input type="hidden" name="grid3" align="center" size="1" value= <%= grid3 %>>
@@ -44,7 +46,7 @@ Player1 is X`s - Player2 (Computer) is O`s
     <% end %>
 </td>
 </tr>
-<td class="grid4" align="center" valign="middle">
+<td class="grid4" align="center">
 <form method="post" action="board">
 	<% if grid4.upcase == 'X' || grid4.upcase == 'O' %>
 	<input type="hidden" name="grid4" align="center" size="1" value= <%= grid4 %>>
@@ -55,7 +57,7 @@ Player1 is X`s - Player2 (Computer) is O`s
 	<input type="submit" name="grid4" align="center" size="1" value= "4">
     <% end %>
 </td>
-<td class="grid5" align="center" valign="middle">
+<td class="grid5" align="center">
 <form method="post" action="board">
 	<% if grid5.upcase == 'X' || grid5.upcase == 'O' %>
 	<input type="hidden" name="grid5" align="center" size="1" value= <%= grid5 %>>
@@ -66,7 +68,7 @@ Player1 is X`s - Player2 (Computer) is O`s
 	<input type="submit" name="grid5" align="center" size="1" value= "5">
     <% end %>
 </td>
-<td class="grid6" align="center" valign="middle">
+<td class="grid6" align="center">
 <form method="post" action="board">
 	<% if grid6.upcase == 'X' || grid6.upcase == 'O' %>
 	<input type="hidden" name="grid6" align="center" size="1" value= <%= grid6 %>>
@@ -78,8 +80,8 @@ Player1 is X`s - Player2 (Computer) is O`s
     <% end %>
 </td>
 </tr>
-<tr style="height:100px">
-<td class="grid7" align="center" valign="middle">
+<tr>
+<td class="grid7" align="center">
 <form method="post" action="board">
 	<% if grid7.upcase == 'X' || grid7.upcase == 'O' %>
 	<input type="hidden" name="grid7" align="center" size="1" value= <%= grid7 %>>
@@ -90,7 +92,7 @@ Player1 is X`s - Player2 (Computer) is O`s
 	<input type="submit" name="grid7" align="center" size="1" value= "7">
     <% end %>
 </td>
-<td class="grid8" align="center" valign="middle">
+<td class="grid8" align="center">
 <form method="post" action="board">
 	<% if grid8.upcase == 'X' || grid8.upcase == 'O' %>
 	<input type="hidden" name="grid8" align="center" size="1" value= <%= grid8 %>>
@@ -101,7 +103,7 @@ Player1 is X`s - Player2 (Computer) is O`s
 	<input type="submit" name="grid8" align="center" size="1" value= "8">
     <% end %>
 </td>
-<td class="grid9" align="center" valign="middle">
+<td class="grid9" align="center">
 <form method="post" action="board">
 	<% if grid9.upcase == 'X' || grid9.upcase == 'O' %>
 	<input type="hidden" name="grid9" align="center" size="1" value= <%= grid9 %>>
@@ -122,5 +124,6 @@ Player1 is X`s - Player2 (Computer) is O`s
 <input type="submit" class="buttonSubmit">
 </td>
 </tr>
-</table><br>
+</table>
+<br>
 </body>
