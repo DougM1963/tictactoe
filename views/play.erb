@@ -1,6 +1,6 @@
 <center>
 <head>
-<title>  Doug`s Tic Tac Toe Game</title>
+<title>Doug`s Tic Tac Toe Game</title>
 </head>
 <body>
 <br>
@@ -11,35 +11,106 @@ Player1 is X`s - Player2 (Computer) is O`s
 <table align="center" width= "200" height= "100" cellpadding= "15" cellspacing= "0">
 <tr style="height:100px">
 <td class="grid1" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid1" align="center" size="1" value= <%= grid1 %>>
+<form method="post" action="board">
+	<% if grid1.upcase == 'X' || grid1.upcase == 'O' %>
+	<input type="hidden" name="grid1" align="center" size="1" value= <%= grid1 %>>
+	<%= grid1 %>
+	<% end %>
+	<% if grid1.upcase != 'X' && grid1.upcase != 'O' %>
+	<input type="hidden" name="grid1" align="center" size="1" value= "">
+	<input type="submit" name="grid1" align="center" size="1" value= "play">
+    <% end %>
 </td>
 <td class="grid2" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid2" align="center" size="1" value= <%= grid2 %>>
+<form method="post" action="board">
+	<% if grid2.upcase == 'X' || grid2.upcase == 'O' %>
+	<input type="hidden" name="grid2" align="center" size="1" value= <%= grid2 %>>
+	<%= grid2 %>
+	<% end %>
+	<% if grid2.upcase != 'X' && grid2.upcase != 'O' %>
+	<input type="hidden" name="grid2" align="center" size="1" value= "">
+	<input type="submit" name="grid2" align="center" size="1" value= "play">
+    <% end %>
 </td>
 <td class="grid3" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid3" align="center" size="1" value= <%= grid3 %>>
+<form method="post" action="board">
+	<% if grid3.upcase == 'X' || grid3.upcase == 'O' %>
+	<input type="hidden" name="grid3" align="center" size="1" value= <%= grid3 %>>
+	<%= grid3 %>
+	<% end %>
+	<% if grid3.upcase != 'X' && grid3.upcase != 'O' %>
+	<input type="hidden" name="grid3" align="center" size="1" value= "">
+	<input type="submit" name="grid3" align="center" size="1" value= "play">
+    <% end %>
 </td>
 </tr>
-<tr style="height:100px">
 <td class="grid4" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid4" align="center" size="1" value= <%= grid4 %>>
+<form method="post" action="board">
+	<% if grid4.upcase == 'X' || grid4.upcase == 'O' %>
+	<input type="hidden" name="grid4" align="center" size="1" value= <%= grid4 %>>
+	<%= grid4 %>
+	<% end %>
+	<% if grid4.upcase != 'X' && grid4.upcase != 'O' %>
+	<input type="hidden" name="grid4" align="center" size="1" value= "">
+	<input type="submit" name="grid4" align="center" size="1" value= "play">
+    <% end %>
 </td>
 <td class="grid5" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid5" align="center" size="1" value= <%= grid5 %>>
+<form method="post" action="board">
+	<% if grid5.upcase == 'X' || grid5.upcase == 'O' %>
+	<input type="hidden" name="grid5" align="center" size="1" value= <%= grid5 %>>
+	<%= grid5 %>
+	<% end %>
+	<% if grid5.upcase != 'X' && grid5.upcase != 'O' %>
+	<input type="hidden" name="grid5" align="center" size="1" value= "">
+	<input type="submit" name="grid5" align="center" size="1" value= "play">
+    <% end %>
 </td>
 <td class="grid6" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid6" align="center" size="1" value= <%= grid6 %>>
+<form method="post" action="board">
+	<% if grid6.upcase == 'X' || grid6.upcase == 'O' %>
+	<input type="hidden" name="grid6" align="center" size="1" value= <%= grid6 %>>
+	<%= grid6 %>
+	<% end %>
+	<% if grid6.upcase != 'X' && grid6.upcase != 'O' %>
+	<input type="hidden" name="grid6" align="center" size="1" value= "">
+	<input type="submit" name="grid6" align="center" size="1" value= "play">
+    <% end %>
 </td>
 </tr>
 <tr style="height:100px">
 <td class="grid7" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid7" align="center" size="1" value= <%= grid7 %>>
+<form method="post" action="board">
+	<% if grid7.upcase == 'X' || grid7.upcase == 'O' %>
+	<input type="hidden" name="grid7" align="center" size="1" value= <%= grid7 %>>
+	<%= grid7 %>
+	<% end %>
+	<% if grid7.upcase != 'X' && grid7.upcase != 'O' %>
+	<input type="hidden" name="grid7" align="center" size="1" value= "">
+	<input type="submit" name="grid7" align="center" size="1" value= "play">
+    <% end %>
 </td>
 <td class="grid8" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid8" align="center" size="1" value= <%= grid8 %>>
+<form method="post" action="board">
+	<% if grid8.upcase == 'X' || grid8.upcase == 'O' %>
+	<input type="hidden" name="grid8" align="center" size="1" value= <%= grid8 %>>
+	<%= grid8 %>
+	<% end %>
+	<% if grid8.upcase != 'X' && grid8.upcase != 'O' %>
+	<input type="hidden" name="grid8" align="center" size="1" value= "">
+	<input type="submit" name="grid8" align="center" size="1" value= "play">
+    <% end %>
 </td>
 <td class="grid9" align="center" valign="middle">
-<form method="post" action="board"><input type="text" name="grid9" align="center" size="1" value= <%= grid9 %>>
+<form method="post" action="board">
+	<% if grid9.upcase == 'X' || grid9.upcase == 'O' %>
+	<input type="hidden" name="grid9" align="center" size="1" value= <%= grid9 %>>
+	<%= grid9 %>
+	<% end %>
+	<% if grid9.upcase != 'X' && grid9.upcase != 'O' %>
+	<input type="hidden" name="grid9" align="center" size="1" value= "">
+	<input type="submit" name="grid9" align="center" size="1" value= "play">
+    <% end %>
 </td>
 </tr>
 <tr>

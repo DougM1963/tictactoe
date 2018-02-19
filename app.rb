@@ -32,23 +32,22 @@ get '/play' do
 	grid7 = params[:grid7]
 	grid8 = params[:grid8]
 	grid9 = params[:grid9]
-	
-	if grid1 == "O"
-			grid1 = "O"
-		elsif grid1 == ""
-			grid1 = ""
-		else grid1 = "X"
-		end
+	if    grid1 == "O"
+	      grid1 = "O"
+	elsif grid1 == """"
+		  grid1 = """"
+	else grid1 = "X"
+	end
 	if grid2 == "O"
 			grid2 = "O"
-		elsif grid2 == ""
-			grid2 = ""
+		elsif grid2 == """"
+			grid2 = """"
 		else grid2 = "X"
 		end
 	if grid3 == "O"
 			grid3 = "O"
-		elsif grid3 == ""
-			grid3 = ""
+		elsif grid3 == """"
+			grid3 = """"
 		else grid3 = "X"
 		end
 	if grid4 == "O"

@@ -132,7 +132,7 @@ border-right: none;
 border-bottom: none;
 border-left-color: #000000;
 }
-input[type=text] {
+input[type=submit] {
   border: none;
     background-color: #74828F;
     color: #000000;
@@ -146,7 +146,7 @@ input[type=text] {
 
     .buttonSubmit
 {
-    display: none;
+  
 }
 .refresh {
   border: none;
