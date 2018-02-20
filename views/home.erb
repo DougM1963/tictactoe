@@ -6,50 +6,52 @@
 <br>
 <div class="title">Doug`s Tic Tac Toe Game </div><br>
 Player1 is X`s - Player2 (Computer) is O`s
-<br><br>
+<br>
+Choose difficulty then click on a grid to begin play
+<br>
 <table align="center" width= "100" height= "100" cellpadding= "0" cellspacing= "0">	
 <tr>
 <td class="grid1" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid1" id="grid1" align="center" size="1">
-	<input type="submit" value="1" name="grid1" id="grid1" align="center" size="1">
+	<input type="submit" value=" " name="grid1" id="grid1" align="center" size="1">
 </td>
 <td class="grid2" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid2" id="grid2" align="center" size="1">
-	<input type="submit" value="2" name="grid2" id="grid2" align="center" size="1">
+	<input type="submit" value=" " name="grid2" id="grid2" align="center" size="1">
 </td>
 <td class="grid3" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid3" id="grid3" align="center" size="1">
-	<input type="submit" value="3" name="grid3" id="grid3" align="center" size="1">
+	<input type="submit" value=" " name="grid3" id="grid3" align="center" size="1">
 </td>
 </tr>
 <tr>
 <td class="grid4" align="center">
 <form method="post" action="board">
 	<input type="hidden" value="" name="grid4" id="grid4" align="center" size="1">
-	<input type="submit" value="4" name="grid4" id="grid4" align="center" size="1">
+	<input type="submit" value=" " name="grid4" id="grid4" align="center" size="1">
 </td>
 <td class="grid5" align="center">
 	<input type="hidden" value="" name="grid5" id="grid5" align="center" size="1">
-	<input type="submit" value="5" name="grid5" id="grid5" align="center" size="1">
+	<input type="submit" value=" " name="grid5" id="grid5" align="center" size="1">
 </td>
 <td class="grid6" align="center">
 	<input type="hidden" value="" name="grid6" id="grid6" align="center" size="1">
-	<input type="submit" value="6" name="grid6" id="grid6" align="center" size="1">
+	<input type="submit" value=" " name="grid6" id="grid6" align="center" size="1">
 </td>
 </tr>
 <tr>
 <td class="grid7" align="center">
 <form method="post" action="board">
 	<input type="hidden" value="" name="grid7" id="grid7" align="center" size="1">
-	<input type="submit" value="7" name="grid7" id="grid7" align="center" size="1">
+	<input type="submit" value="" name="grid7" id="grid7" align="center" size="1">
 </td>
 <td class="grid8" align="center">
 	<input type="hidden" value="" name="grid8" id="grid8" align="center" size="1">
-	<input type="submit" value="8" name="grid8" id="grid8" align="center" size="1">
+	<input type="submit" value=" " name="grid8" id="grid8" align="center" size="1">
 </td>
 <td class="grid9" align="center">
 	<input type="hidden" value="" name="grid9" id="grid9" align="center" size="1">
-	<input type="submit" value="9" name="grid9" id="grid9" align="center" size="1">
+	<input type="submit" value=" " name="grid9" id="grid9" align="center" size="1">
 </td>
 </tr>
 <tr>
@@ -62,5 +64,11 @@ Player1 is X`s - Player2 (Computer) is O`s
 </td>
 </tr>
 </table>
+Choose how difficult you want to play:
+<form>
+<input type = "hidden" action="/play" name="opponent" value= "not_chosen">
+ <input type="radio" action="/play" name="opponent" value="Easy"> Easy
+ <input type="radio" action="/play" name="opponent" value="Hard"> Hard<br>
+</form>
 <br>
 </body>
