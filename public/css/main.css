@@ -190,23 +190,7 @@ footer {
    border-left-color: #000000;
    resize: none;
 }
-input[type=submit] {
-  border:none;
-    background-color: #74828F;
-    color: #000000;
-    font-size:50px;
-    text-align: center;
-  width: 100px;
-  height: 100px;
-  resize: none;
-    box-sizing: border-box;
 
-    }
-
-    .buttonSubmit
-{
-  display: none;
-}
 .refresh {
   border: none;
     background-color: #74828F;
@@ -231,4 +215,44 @@ input[type=submit] {
 form {
     margin-bottom: 0em;
     resize: none;
+}
+input[type=submit] {
+  border:none;
+    background-color: #74828F;
+    color: #000000;
+    font-size:50px;
+    text-align: center;
+  width: 100px;
+  height: 100px;
+  resize: none;
+    box-sizing: border-box;
+
+    }
+input[type=submit] {
+  border:none;
+    background-color: #74828F;
+    color: #000000;
+    font-size:45px;
+    text-align: center;
+  width: 100px;
+  height: 100px;
+  resize: none;
+    box-sizing: border-box;
+}
+
+    .buttonsubmit
+{
+  display: none;
+}
+.playsubmit
+{
+  border:none;
+    background-color: #74828F;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+  width: 100px;
+  height: 100px;
+  resize: none;
+    box-sizing: border-box;
 }

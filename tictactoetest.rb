@@ -23,7 +23,13 @@ class TestTicTacToe < Minitest::Test
 		assert_equal("O's have won", winners("O","X","X","X","O","X","O","O","O"))
 	end
 
-
+	def test_assert_ai_picks
+		assert_equal("square5", plays_ai("X","","","","","","","","O"))
+		assert_equal("square3", plays_ai("X","X","","","O","","","","O"))
+		assert_equal("square6", plays_ai("X","X","","O","O","","","",""))
+		assert_equal("square8", plays_ai("X","","","","X","","O","","O"))
+		refute_equal("square4", plays_ai("X","","","X","","","","","O"))
+	end	
 
 
 end

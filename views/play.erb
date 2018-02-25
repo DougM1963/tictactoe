@@ -7,7 +7,7 @@
 <div class="title">Doug`s Tic Tac Toe Game </div><br>
 Player1 is X`s - Player2 (Computer) is O`s
 <br>
-Click on a spot to begin play
+Click on a spot to play:
 <br>
 <%= winner_result %>
 <br>
@@ -102,7 +102,7 @@ Click on a spot to begin play
 	<% end %>
 	<% if grid8.upcase != 'X' && grid8.upcase != 'O' %>
 	<input type="hidden" name="grid8" align="center" size="1" value= "">
-	<input type="submit" name="grid8" align="center" size="1" value= "">
+	<input type="submit" name="grid8" align="center" size="1" value= " ">
     <% end %>
 </td>
 <td class="grid9" align="center">
