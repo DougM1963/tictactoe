@@ -59,9 +59,12 @@ To let the computer go first hit the Play button<br><br>
 </td>
 </tr>
 </table>
-<form method="post" action="board"> 
-	<input type="radio" name="opponent" value="easy">Easy<br>
-    <input type="radio" name="opponent" value="difficult">Difficult<br> 
+<form method="post" action="board">
+    <% random_level = ["easy", "difficult"] %>
+    <% random_level_pick = random_level.sample %>
+    <input type="hidden" name="opponent" value= <%= random_level_pick %>>
+    <input type="radio" name="opponent" value="easy">Easy<br>
+   <input type="radio" name="opponent" value="difficult">Difficult<br> 
 </form>
 <br>
 </body>
