@@ -7,7 +7,7 @@
 <div class="title">Doug`s Tic Tac Toe Game </div><br>
 Player 1 is X`s - Computer is O`s
 <br>
-Select difficulty below the board
+For a real challenge select Difficult button below
 <br>
 To let the computer go first hit the Play button<br><br>
 <table align="center" width= "100" height= "100" cellpadding= "0" cellspacing= "0">	
@@ -26,31 +26,29 @@ To let the computer go first hit the Play button<br><br>
 </td>
 </tr>
 <tr>
-<td class="grid4" align="center">
-<form method="post" action="board">
+<td class="grid4" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid4" id="grid4" align="center" size="1">
 	<input type="submit" value=" " name="grid4" id="grid4" align="center" size="1">
 </td>
-<td class="grid5" align="center">
+<td class="grid5" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid5" id="grid5" align="center" size="1">
 	<input type="submit" value=" " name="grid5" id="grid5" align="center" size="1">
 </td>
-<td class="grid6" align="center">
+<td class="grid6" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid6" id="grid6" align="center" size="1">
 	<input type="submit" value=" " name="grid6" id="grid6" align="center" size="1">
 </td>
 </tr>
 <tr>
-<td class="grid7" align="center">
-<form method="post" action="board">
+<td class="grid7" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid7" id="grid7" align="center" size="1">
 	<input type="submit" value=" " name="grid7" id="grid7" align="center" size="1">
 </td>
-<td class="grid8" align="center">
+<td class="grid8" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid8" id="grid8" align="center" size="1">
 	<input type="submit" value=" " name="grid8" id="grid8" align="center" size="1">
 </td>
-<td class="grid9" align="center">
+<td class="grid9" align="center"><form method="post" action="board">
 	<input type="hidden" value="" name="grid9" id="grid9" align="center" size="1">
 	<input type="submit" value=" " name="grid9" id="grid9" align="center" size="1">
 </td>
@@ -61,10 +59,9 @@ To let the computer go first hit the Play button<br><br>
 </td>
 </tr>
 </table>
-<form action="/play" method="get"> 
-    <input type="radio" name="opponent" value="easy">Easy
+<form method="post" action="board"> 
+	<input type="radio" name="opponent" value="easy">Easy<br>
     <input type="radio" name="opponent" value="difficult">Difficult<br> 
-    <div class="playsubmit"><input type="submit" value="Play"></div>
 </form>
 <br>
 </body>

@@ -6,23 +6,7 @@ get '/' do
 	erb :home
 end
 
-post '/board' do 
-	grid1 = params[:grid1]
-	grid2 = params[:grid2]
-	grid3 = params[:grid3]
-	grid4 = params[:grid4]
-	grid5 = params[:grid5]
-	grid6 = params[:grid6]
-	grid7 = params[:grid7]
-	grid8 = params[:grid8]
-	grid9 = params[:grid9]
-	puts grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
-	redirect '/play?grid1=' + grid1.upcase + '&grid2=' + grid2.upcase + '&grid3=' + grid3.upcase + '&grid4=' + grid4.upcase + '&grid5=' + grid5.upcase + '&grid6=' + grid6.upcase + '&grid7=' + grid7.upcase + '&grid8=' + grid8.upcase + '&grid9=' + grid9.upcase
-end
-
-get '/play' do
-	computer = " "
-	winner_result = " "
+post '/board' do
 	opponent = params[:opponent]
 	grid1 = params[:grid1]
 	grid2 = params[:grid2]
@@ -33,7 +17,34 @@ get '/play' do
 	grid7 = params[:grid7]
 	grid8 = params[:grid8]
 	grid9 = params[:grid9]
+	if opponent == "easy"
+    	opponent = "easy"
+    elsif opponent == "difficult"
+    	opponent = "difficult"
+    end
+	puts grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
+	redirect '/play?opponent=' + opponent + '&grid1=' + grid1.upcase + '&grid2=' + grid2.upcase + '&grid3=' + grid3.upcase + '&grid4=' + grid4.upcase + '&grid5=' + grid5.upcase + '&grid6=' + grid6.upcase + '&grid7=' + grid7.upcase + '&grid8=' + grid8.upcase + '&grid9=' + grid9.upcase
+end
+
+get '/play' do
+	opponent = params[:opponent]
+	computer = " "
+	winner_result = " "
+	grid1 = params[:grid1]
+	grid2 = params[:grid2]
+	grid3 = params[:grid3]
+	grid4 = params[:grid4]
+	grid5 = params[:grid5]
+	grid6 = params[:grid6]
+	grid7 = params[:grid7]
+	grid8 = params[:grid8]
+	grid9 = params[:grid9]
     # the following if statement makes it so you have an X or O only in game
+    if opponent == "easy"
+    	opponent = "easy"
+    elsif opponent == "difficult"
+    	opponent = "difficult"
+    end
 	if    grid1 == "O"
 	      grid1 = "O"
 	elsif grid1 == """"
@@ -89,12 +100,10 @@ get '/play' do
 		else grid9 = "X"
 		end
 	print grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
-	computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9) # Makes computer equal play_random
-	opponent = play_ai(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9) # Makes opponent equal to play_ai
     # The following if statement selects either difficult or easy
 	if opponent == "easy"
 		computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
-	else opponent == "difficult"
+	elsif opponent == "difficult"
 		computer = play_ai(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
 	end
 	# The following if statement plays the computer
@@ -119,6 +128,6 @@ get '/play' do
 		end
 	
 	winner_result = winners(grid1.upcase,grid2.upcase,grid3.upcase,grid4.upcase,grid5.upcase,grid6.upcase,grid7.upcase,grid8.upcase,grid9.upcase)	
-	erb :play, :locals => {:grid1 => grid1, :grid2 => grid2, :grid3 => grid3, :grid4 => grid4, :grid5 => grid5, :grid6 => grid6, :grid7 => grid7, :grid8 => grid8, :grid9 => grid9, :opponent => opponent, :computer => computer, :winner_result => winner_result}
+	erb :play, :locals => {:opponent => opponent, :grid1 => grid1, :grid2 => grid2, :grid3 => grid3, :grid4 => grid4, :grid5 => grid5, :grid6 => grid6, :grid7 => grid7, :grid8 => grid8, :grid9 => grid9, :computer => computer, :winner_result => winner_result}
 end
 

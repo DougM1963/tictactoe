@@ -124,5 +124,4 @@ def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid plac
  	a = "grid"
  	 out = a<<$ai_pick.to_s # "out" links the grid number, for example "1", with the word "grid" to make "grid1" which is returned from the function	
  	return out
- end
-  
+ end 
