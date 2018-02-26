@@ -5,11 +5,11 @@
 <body>
 <br>
 <div class="title">Doug`s Tic Tac Toe Game </div><br>
-Player1 is X`s - Player2 (Computer) is O`s
+Player 1 is X`s - Computer is O`s
 <br>
-Select difficulty below the board:
+Select difficulty below the board
 <br>
-To let the computer go first hit the Play button:
+To let the computer go first hit the Play button<br><br>
 <table align="center" width= "100" height= "100" cellpadding= "0" cellspacing= "0">	
 <tr>
 <td class="grid1" align="center"><form method="post" action="board">
@@ -44,7 +44,7 @@ To let the computer go first hit the Play button:
 <td class="grid7" align="center">
 <form method="post" action="board">
 	<input type="hidden" value="" name="grid7" id="grid7" align="center" size="1">
-	<input type="submit" value="" name="grid7" id="grid7" align="center" size="1">
+	<input type="submit" value=" " name="grid7" id="grid7" align="center" size="1">
 </td>
 <td class="grid8" align="center">
 	<input type="hidden" value="" name="grid8" id="grid8" align="center" size="1">
@@ -56,18 +56,13 @@ To let the computer go first hit the Play button:
 </td>
 </tr>
 <tr>
-<td colspan="3" class="refresh" align="center"><a href='https://dougtictactoe.herokuapp.com/'>Click here to Play Again</a>
-<br>
-</td>
-</tr>
-<tr>
 <td>
 <input type="submit" class="buttonsubmit">
 </td>
 </tr>
 </table>
 <form action="/play" method="get"> 
-    <input type="radio" name="opponent" value="easy">Easy<br> 
+    <input type="radio" name="opponent" value="easy">Easy
     <input type="radio" name="opponent" value="difficult">Difficult<br> 
     <div class="playsubmit"><input type="submit" value="Play"></div>
 </form>

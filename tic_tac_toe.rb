@@ -30,7 +30,7 @@ def play_random(a,b,c,d,e,f,g,h,i)
 	untaken_grids = all_grids - taken_grids	
 	random_pick = untaken_grids.shuffle.pop.to_s
 	a = "grid"
-	out = a<<random_pick 
+	out = a<<random_pick #"out" links the grid number, for example "1", with the word "grid" to make "grid1" which is returned from the function	
 	return out
 	puts out
 
@@ -51,17 +51,16 @@ def winners(a,b,c,d,e,f,g,h,i)
 				break
 			else
 				$result = "No Winners Yet"
-
 			end
 	end
 	return $result 
 end
 
-def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid placement of the next "O" value to avoid losing. It takes in contents of all 9 grids (a through i) as input.
-	all_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i}
-	all_grids = [a,b,c,d,e,f,g,h,i]
+def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid placement of the next "O" value to avoid losing. 
+	all_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i} # Hash of grids and numbers
+	all_grids = [a,b,c,d,e,f,g,h,i] # Array of all grids
 
-	win1 = {1 => a, 2 => b, 3 => c} #the win 1 through win9 hashes hold the current plays that are used to decide on the next "O" placement
+	win1 = {1 => a, 2 => b, 3 => c} #the win 1 through win9 hashes hold the current plays that are used to decide the next "O" placement
  	win2 = {4 => d, 5 => e, 6 => f}
  	win3 = {7 => g, 8 => h, 9 => i}
  	win4 = {1 => a, 4 => d, 7 => g}
@@ -69,7 +68,7 @@ def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid plac
  	win6 = {3 => c, 5 => e, 7 => g}
  	win7 = {2 => b, 5 => e, 8 => h}
 	win8 = {3 => c, 6 => f, 9 => i}
-	#The following is a cascade of commands that selects the grid $ai_pick to be played. The value of $ai_pick may be overwritten as the program proceeds through the code as the criticality of placement increases as the program progresses
+	#The following is a cascade of commands that selects the grid $ai_pick to be played.
 	middle_sides = {2 => b, 4 =>d, 6 => f, 8 => h} #this code selects an empty middle side location
 	middle_sides.each do | key , value |
 		if value == ""
@@ -77,14 +76,14 @@ def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid plac
 		end
 	end
 
-	corners = {1 => a, 3 => c, 7 => g, 9 => i}	#middle side locations may be overwritten by a corner 													selection				
+	corners = {1 => a, 3 => c, 7 => g, 9 => i}	# Middle side locations may be overwritten by a corner 													selection				
 	corners.each do |key, value|
 		if value == ""
 			$ai_pick = key
 		end
 	end		
 
-#this section checks to see if 2 X's are in row with a blank and then selects the blank grid for the next play to block the X's from winning
+# This section checks to see if 2 X's are in row with a blank and then selects the blank grid for the next play to block the X's from winning
  	win_grids = [win1,win2,win3,win3,win4,win5,win6,win7,win8]
  	(0..8).each do |i|							
 		three = win_grids[i] 
@@ -98,8 +97,7 @@ def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid plac
  					end
 	end	 
  
-#this section checks to see if 2 O's are in a row with a blank and then selects the blank grid for the next play to win the game
- 
+# This section checks to see if 2 O's are in a row with a blank and then selects the blank grid for the next play to win the game
 	(0..8).each do |i|
 		three = win_grids[i] 
 		x_num = three.select {|k,v| v == "X"} 
@@ -112,7 +110,7 @@ def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid plac
 		end			 	
  	end
 
-	if all_hash[5] == "" #This selects the midle grid if it is open . This is always the first play for 							O if it is available
+	if all_hash[5] == "" # This selects the middle grid if it is open . This is always the first play for O if it is available
 		$ai_pick = 5.to_s 	
  	end	
 
@@ -124,7 +122,7 @@ def play_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the grid plac
 	end
 		
  	a = "grid"
- 	 out = a<<$ai_pick.to_s #"out" concatenates the grid number, for example "1", with the word "grid" to make "grid1" which is returned from the function	
+ 	 out = a<<$ai_pick.to_s # "out" links the grid number, for example "1", with the word "grid" to make "grid1" which is returned from the function	
  	return out
  end
- # plays_ai("","X","O","X","X","X","X","O","O")	 
+  

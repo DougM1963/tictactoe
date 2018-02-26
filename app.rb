@@ -33,7 +33,7 @@ get '/play' do
 	grid7 = params[:grid7]
 	grid8 = params[:grid8]
 	grid9 = params[:grid9]
-    
+    # the following if statement makes it so you have an X or O only in game
 	if    grid1 == "O"
 	      grid1 = "O"
 	elsif grid1 == """"
@@ -89,15 +89,15 @@ get '/play' do
 		else grid9 = "X"
 		end
 	print grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
-	computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
-	opponent = play_ai(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
-
+	computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9) # Makes computer equal play_random
+	opponent = play_ai(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9) # Makes opponent equal to play_ai
+    # The following if statement selects either difficult or easy
 	if opponent == "easy"
 		computer = play_random(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
-	else
+	else opponent == "difficult"
 		computer = play_ai(grid1,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9)
 	end
-	
+	# The following if statement plays the computer
 	if computer == "grid1"
 			grid1 = "O"
 		elsif computer == "grid2"
